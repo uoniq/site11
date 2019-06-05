@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css" integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+	<style type="text/css">
+		img{
+			width: 100px; 
+			position: absolute; 
+			display: none;
+		}
+
+	
+	</style>
+</head>
+<body>
+	<div style="background-image: url(game.png); height: 1000px; background-size: 100% 100%">
+		
+		<button class="btn btn-warning btn_flower_size"  style="position: absolute;  margin-left: 20%; margin-top: 3%">Увеличить цветы</button>
+		<button class="btn btn-success btn_shooter_size" style="position: absolute;  margin-left: 30%; margin-top: 3%" >Увеличить горох</button>
+		<button class="btn btn-primary btn_shooter_upd" style="position: absolute;  margin-left: 39.8%; margin-top: 3%" >lvl up</button>
+		<button class="btn btn-danger btn_start" style="position: absolute;  margin-left: 44.15%; margin-top: 3%" >start</button>
+		<button class="btn btn-secondary btn_all" style="position: absolute;  margin-left: 47.99%; margin-top: 3%" >plant all</button>
+		<!--цветы 1 ряд-->
+		<img class="flower" src="sunflower.png"  style=" margin-left: 33%; margin-top: 13%; ">
+		<img class="flower" src="sunflower.png"  style=" margin-left: 33%; margin-top: 19%; ">
+		<img class="flower" src="sunflower.png"  style=" margin-left: 33%; margin-top: 25%; ">
+		<img class="flower" src="sunflower.png"  style=" margin-left: 33%; margin-top: 31%; ">
+		<img class="flower" src="sunflower.png"  style=" margin-left: 33%; margin-top: 37%; ">
+		<button class="flower_btn" style="color: yellow; font-weight: bold; position: absolute; margin-left: 33%; margin-top: 17%; ">PLANT</button>	
+		<button class="flower_btn" style="color: yellow; font-weight: bold; position: absolute; margin-left: 33%; margin-top: 23%; ">PLANT</button>
+		<button class="flower_btn" style="color: yellow; font-weight: bold; position: absolute; margin-left: 33%; margin-top: 29%; ">PLANT</button>
+		<button class="flower_btn" style="color: yellow; font-weight: bold; position: absolute; margin-left: 33%; margin-top: 35%; ">PLANT</button>
+		<button class="flower_btn" style="color: yellow; font-weight: bold; position: absolute; margin-left: 33%; margin-top: 41%; ">PLANT</button>
+
+		<!--горох 2 ряд-->
+		<img class="pepper" src="pepper.png"  style=" margin-left: 47%; margin-top: 13%; width: 80px">		
+		<img class="pepper" src="pepper.png"  style=" margin-left: 47%; margin-top: 19%; width: 80px">	
+		<img class="pepper" src="pepper.png"  style=" margin-left: 47%; margin-top: 25%; width: 80px">	
+		<img class="pepper" src="pepper.png"  style=" margin-left: 47%; margin-top: 31%; width: 80px">
+		<img class="pepper" src="pepper.png"  style=" margin-left: 47%; margin-top: 37%; width: 80px;">		
+		<button class="pepper_btn" style="color: red; font-weight: bold; position: absolute; margin-left: 47%; margin-top: 17%; ">PLANT</button>
+		<button class="pepper_btn" style="color: red; font-weight: bold; position: absolute; margin-left: 47%; margin-top: 23%; ">PLANT</button>
+		<button class="pepper_btn" style="color: red; font-weight: bold; position: absolute; margin-left: 47%; margin-top: 29%; ">PLANT</button>
+		<button class="pepper_btn" style="color: red; font-weight: bold; position: absolute; margin-left: 47%; margin-top: 35%; ">PLANT</button>
+		<button class="pepper_btn" style="color: red; font-weight: bold; position: absolute; margin-left: 47%; margin-top: 41%; ">PLANT</button>		
+
+		<img class="shooter" src="peashooter.png"  style=" margin-left: 40%; margin-top: 13%; ">		
+		<img class="shooter" src="peashooter.png"  style=" margin-left: 40%; margin-top: 19%; ">	
+		<img class="shooter" src="peashooter.png"  style=" margin-left: 40%; margin-top: 25%; ">	
+		<img class="shooter" src="peashooter.png"  style=" margin-left: 40%; margin-top: 31%; ">
+		<img class="shooter" src="peashooter.png"  style=" margin-left: 40%; margin-top: 37%; ">		
+		<button class="shooter_btn" style="color: green; font-weight: bold; position: absolute; margin-left: 40%; margin-top: 17%; ">PLANT</button>
+		<button class="shooter_btn" style="color: green; font-weight: bold; position: absolute; margin-left: 40%; margin-top: 23%; ">PLANT</button>	
+		<button class="shooter_btn" style="color: green; font-weight: bold; position: absolute; margin-left: 40%; margin-top: 29%; ">PLANT</button>
+		<button class="shooter_btn" style="color: green; font-weight: bold; position: absolute; margin-left: 40%; margin-top: 35%; ">PLANT</button>
+		<button class="shooter_btn" style="color: green; font-weight: bold; position: absolute; margin-left: 40%; margin-top: 41%; ">PLANT</button>	
+
+		<img class="zombie" src="zombie.png"  style=" margin-left: 60%; margin-top: 13%; ">		
+		<img class="zombie" src="zombie.png"  style=" margin-left: 70%; margin-top: 19%; ">	
+		<img class="zombie" src="zombie.png"  style=" margin-left: 78%; margin-top: 25%; ">	
+		<img class="zombie" src="zombie.png"  style=" margin-left: 67%; margin-top: 31%; ">
+
+
+		
+									
+	</div>
+
+<script>
+
+	let flowers = document.querySelectorAll(".flower");
+	let flower_btn = document.querySelectorAll(".flower_btn");
+
+	let shooter_btn = document.querySelectorAll(".shooter_btn");
+	let shooter = document.querySelectorAll(".shooter");
+
+	let pepper_btn = document.querySelectorAll(".pepper_btn")
+	let pepper = document.querySelectorAll(".pepper")
+
+	let zombie = document.querySelectorAll(".zombie")
+
+	//нажатие на цветы
+	flower_btn[0].onclick = function(){
+		flowers[0].style.display = "block"
+		flower_btn[0].style.display = "none"
+	}    
+	flower_btn[1].onclick = function(){
+		flowers[1].style.display = "block"
+		flower_btn[1].style.display = "none"
+	}   
+	flower_btn[2].onclick = function(){
+		flowers[2].style.display = "block"
+		flower_btn[2].style.display = "none"
+	}   
+	flower_btn[3].onclick = function(){
+		flowers[3].style.display = "block"
+		flower_btn[3].style.display = "none"
+	}   
+	flower_btn[4].onclick = function(){
+		flowers[4].style.display = "block"
+		flower_btn[4].style.display = "none"
+	}   
+
+
+	//нажатие на горох
+	shooter_btn[0].onclick = function(){
+		shooter[0].style.display = "block"
+		shooter_btn[0].style.display = "none"
+	}   
+	shooter_btn[1].onclick = function(){
+		shooter[1].style.display = "block"
+		shooter_btn[1].style.display = "none"
+	}   
+	shooter_btn[2].onclick = function(){
+		shooter[2].style.display = "block"
+		shooter_btn[2].style.display = "none"
+	}   
+	shooter_btn[3].onclick = function(){
+		shooter[3].style.display = "block"
+		shooter_btn[3].style.display = "none"
+	}   
+	shooter_btn[4].onclick = function(){
+		shooter[4].style.display = "block"
+		shooter_btn[4].style.display = "none"
+	}   
+
+	pepper_btn[0].onclick = function(){
+		pepper[0].style.display = "block"
+		pepper_btn[0].style.display = "none"
+	}   
+	pepper_btn[1].onclick = function(){
+		pepper[1].style.display = "block"
+		pepper_btn[1].style.display = "none"
+	}   
+	pepper_btn[2].onclick = function(){
+		pepper[2].style.display = "block"
+		pepper_btn[2].style.display = "none"
+	}   
+	pepper_btn[3].onclick = function(){
+		pepper[3].style.display = "block"
+		pepper_btn[3].style.display = "none"
+	}   
+	pepper_btn[4].onclick = function(){
+		pepper[4].style.display = "block"
+		pepper_btn[4].style.display = "none"
+	}
+
+	document.querySelector(".btn_shooter_size").onclick = function(){	
+		for(let index = 0; index<5; index = index + 1){	
+			shooter[index].style.width = "200px";
+		}
+	}
+	document.querySelector(".btn_flower_size").onclick = function(){
+		for(let index = 0; index<5; index = index + 1){
+			flowers[index].style.width = "200px";
+		}
+	}
+	document.querySelector(".btn_shooter_upd").onclick = function(){
+		for(let index = 0; index<5; index = index + 1){
+			shooter[index].src = "peashooter2.png";
+			flowers[index].src = "sunflower2.png"
+			pepper[index].src = "pepper2.png"
+			pepper[index].style.width = "120px"
+		}
+	}	
+	document.querySelector(".btn_start").onclick = function(){
+		for(let index = 0; index<4; index = index + 1){
+			zombie[index].style.display = "block";
+		}
+	}	
+	document.querySelector(".btn_all").onclick = function(){
+		for(let index = 0; index<5; index = index + 1){
+			shooter[index].style.display = "block";
+			flowers[index].style.display = "block";
+			pepper[index].style.display = "block";
+			flower_btn[index].style.display = "none"
+			shooter_btn[index].style.display = "none"
+			pepper_btn[index].style.display = "none"
+		}
+	}
+
+</script>
+</body>
+</html>
